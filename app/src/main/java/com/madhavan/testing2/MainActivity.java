@@ -19,63 +19,79 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        op1 = (EditText) findViewById(R.id.op1);
-        op2 = (EditText) findViewById(R.id.op2);
+        op1 = findViewById(R.id.op1);
+        op2 = findViewById(R.id.op2);
 
-        output = (TextView) findViewById(R.id.output);
+        output = findViewById(R.id.output);
 
-        add = (Button) findViewById(R.id.add);
-        sub = (Button) findViewById(R.id.sub);
-        mul = (Button) findViewById(R.id.mul);
-        div = (Button) findViewById(R.id.div);
+        add = findViewById(R.id.add);
+        sub = findViewById(R.id.sub);
+        mul = findViewById(R.id.mul);
+        div = findViewById(R.id.div);
     }
 
     public void addFunc(View v){
-        String op1_text = op1.getText().toString();
-        float op1_int = Float.parseFloat(op1_text);
+        try {
+            String op1_text = op1.getText().toString();
+            float op1_int = Float.parseFloat(op1_text);
 
-        String op2_text = op2.getText().toString();
-        float op2_int = Float.parseFloat(op2_text);
+            String op2_text = op2.getText().toString();
+            float op2_int = Float.parseFloat(op2_text);
 
-        float output_int = op1_int + op2_int;
+            float output_int = op1_int + op2_int;
 
-        output.setText(String.valueOf(output_int));
+            output.setText(String.valueOf(output_int));
+        }catch(Exception e){
+            output.setText("Please Enter All Fields With Float Value");
+        }
     }
 
     public void subFunc(View v){
-        String op1_text = op1.getText().toString();
-        float op1_int = Float.parseFloat(op1_text);
+        try {
+            String op1_text = op1.getText().toString();
+            float op1_int = Float.parseFloat(op1_text);
 
-        String op2_text = op2.getText().toString();
-        float op2_int = Float.parseFloat(op2_text);
+            String op2_text = op2.getText().toString();
+            float op2_int = Float.parseFloat(op2_text);
 
-        float output_int = op1_int - op2_int;
+            float output_int = op1_int - op2_int;
 
-        output.setText(String.valueOf(output_int));
+            output.setText(String.valueOf(output_int));
+        }catch (Exception e){
+            output.setText("Please Enter All Fields With Float Value");
+        }
     }
 
     public void mulFunc(View v){
-        String op1_text = op1.getText().toString();
-        float op1_int = Float.parseFloat(op1_text);
+        try {
+            String op1_text = op1.getText().toString();
+            float op1_int = Float.parseFloat(op1_text);
 
-        String op2_text = op2.getText().toString();
-        float op2_int = Float.parseFloat(op2_text);
+            String op2_text = op2.getText().toString();
+            float op2_int = Float.parseFloat(op2_text);
 
-        float output_int = op1_int * op2_int;
+            float output_int = op1_int * op2_int;
 
-        output.setText(String.valueOf(output_int));
+            output.setText(String.valueOf(output_int));
+        }catch(Exception e){
+            output.setText("Please Enter All Fields With Float Value");
+        }
     }
 
     public void divFunc(View v){
-        String op1_text = op1.getText().toString();
-        float op1_int = Float.parseFloat(op1_text);
+        try {
+            String op1_text = op1.getText().toString();
+            float op1_int = Float.parseFloat(op1_text);
 
-        String op2_text = op2.getText().toString();
-        float op2_int = Float.parseFloat(op2_text);
+            String op2_text = op2.getText().toString();
+            float op2_int = Float.parseFloat(op2_text);
 
-        float output_int = op1_int / op2_int;
+            float output_int = op1_int / op2_int;
 
-        output.setText(String.valueOf(output_int));
+            output.setText(String.valueOf(output_int));
+        }catch(Exception e){
+            output.setText("Please Enter All Fields With Float Value");
+        }
     }
 
 }
